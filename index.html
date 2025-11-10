@@ -124,7 +124,7 @@
 .about-flex {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row; /* photo left, text right */
+  flex-direction: row; /* text left, photo right */
   align-items: flex-start;
   gap: 28px;
 }
@@ -137,9 +137,9 @@
   border: 1px solid var(--rule);
   display: block;
   flex-shrink: 0; /* prevent image from shrinking */
-  order: -1; /* ensure photo comes first */
+  order: 1; /* move photo to the right */
 }
-.about-text { 
+    .about-text { 
   flex: 1 1 0; 
   min-width: 300px; /* ensure text has minimum width */
 }
