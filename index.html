@@ -129,15 +129,15 @@
   gap: 28px;
 }
 
-.about-flex .portrait {
-  width: 240px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 12px;
-  border: 1px solid var(--rule);
-  display: block;
-  flex-shrink: 0; /* prevent image from shrinking */
-  order: 1; /* move photo to the right */
+.about-flex .portrait{
+  width:240px; 
+  height:auto; 
+  display:block;
+  flex-shrink:0; 
+  order:1;
+  border-radius:12px;
+  border:1px solid var(--rule); 
+  object-fit:contain;
 }
     .about-text { 
   flex: 1 1 0; 
@@ -188,21 +188,28 @@
 
       </div>
 
+<picture class="portrait">
+  <source
+    media="(min-width: 701px)"
+    srcset="
+      https://images.weserv.nl/?url=raw.githubusercontent.com/giulianoinfantino/giulianoinfantino/main/profilfoto_neu.png&w=480&output=webp 480w,
+      https://images.weserv.nl/?url=raw.githubusercontent.com/giulianoinfantino/giulianoinfantino/main/profilfoto_neu.png&w=960&output=webp 960w,
+      https://images.weserv.nl/?url=raw.githubusercontent.com/giulianoinfantino/giulianoinfantino/main/profilfoto_neu.png&w=1600&output=webp 1600w
+    "
+    sizes="240px"
+    type="image/webp"
+  />
+  <!-- Fallback 1×1 transparent gif so phones don't load anything -->
+  <img
+    src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+    alt="Portrait of Giuliano Infantino"
+    width="240" height="240"
+    decoding="async"
+    loading="lazy"
+    style="display:none"
+  />
+</picture>
 
-     <img
-  src="https://images.weserv.nl/?url=raw.githubusercontent.com/giulianoinfantino/giulianoinfantino/main/profilfoto_neu.png&w=480&output=webp"
-  srcset="
-    https://images.weserv.nl/?url=raw.githubusercontent.com/giulianoinfantino/giulianoinfantino/main/profilfoto_neu.png&w=480&output=webp 480w,
-    https://images.weserv.nl/?url=raw.githubusercontent.com/giulianoinfantino/giulianoinfantino/main/profilfoto_neu.png&w=960&output=webp 960w,
-    https://images.weserv.nl/?url=raw.githubusercontent.com/giulianoinfantino/giulianoinfantino/main/profilfoto_neu.png&w=1600&output=webp 1600w
-  "
-  sizes="(max-width: 700px) 40vw, 240px"
-  alt="Portrait of Giuliano Infantino"
-  class="portrait"
-  width="240" height="240"
-  decoding="async"
-  fetchpriority="high"
-/>
 
       
     </div>
